@@ -1,0 +1,49 @@
+﻿<Page x:Class="WPFApplication.ExpenseItHome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="600"
+	Title="ExpenseIt - Home"
+      Background="Black">
+
+    <StackPanel HorizontalAlignment="Left">
+        <!--
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+        -->
+        <!--<Rectangle Height="48" Name="rectangle1" Stroke="Black" Width="140" />-->
+
+        <!-- Outer Rectangle with rounded corners. -->
+        <!--"{TemplateBinding Background}" -->
+        
+        <Rectangle x:Name="outerRectangle" 
+                   Margin="30"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Stretch" 
+                   Stroke="Wheat"   
+                   Width="340" 
+                   Height="250"
+                   RadiusX="20" 
+                   RadiusY="20" 
+                   StrokeThickness="15" 
+                   Fill="DarkBlue" 
+                   />
+        
+        
+        
+        <Ellipse 
+            Height="200"
+            Name="ellipse1" 
+            Stroke="Beige" 
+            Width="400"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Margin="30"
+            StrokeThickness="15"
+            
+            />
+    </StackPanel>
+</Page>

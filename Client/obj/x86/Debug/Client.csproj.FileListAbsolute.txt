@@ -1,0 +1,9 @@
+C:\MyStuff\Dev\Apps\Client\bin\Debug\Client.exe
+C:\MyStuff\Dev\Apps\Client\bin\Debug\Client.pdb
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\Client.Properties.Resources.resources
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\Client.exe
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\Client.pdb
+C:\MyStuff\Dev\Apps\Client\obj\x86\Debug\Client.Form1.resources

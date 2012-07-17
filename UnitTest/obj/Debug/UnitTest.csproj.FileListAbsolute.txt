@@ -1,0 +1,9 @@
+C:\MyStuff\Dev\Apps\UnitTest\obj\Debug\ResolveAssemblyReference.cache
+C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\UnitTest.dll
+C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\UnitTest.pdb
+C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\Common.dll
+C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\Data.dll
+C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\Common.pdb
+C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\Data.pdb
+C:\MyStuff\Dev\Apps\UnitTest\obj\Debug\UnitTest.dll
+C:\MyStuff\Dev\Apps\UnitTest\obj\Debug\UnitTest.pdb

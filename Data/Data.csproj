@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30E030F4-DEE5-4F50-8D61-D0D67E70C12F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\Customers.cs" />
+    <Compile Include="DataAccess\EntityBase.cs" />
+    <Compile Include="DataAccess\Session.cs" />
+    <Compile Include="Objects\Entity\Name.cs" />
+    <Compile Include="Objects\Entity\NamesDo.cs" />
+    <Compile Include="Objects\Entity\Association.cs" />
+    <Compile Include="Objects\Entity\AssociationsDo.cs" />
+    <Compile Include="Objects\Entity\Contact.cs" />
+    <Compile Include="Objects\Entity\ContactsDo.cs" />
+    <Compile Include="Objects\Entity\Entity.cs" />
+    <Compile Include="Objects\Entity\Manifest.cs" />
+    <Compile Include="Objects\Entity\Order.cs" />
+    <Compile Include="Objects\Entity\OrderQue.cs" />
+    <Compile Include="Objects\Products\InventoriesDo.cs" />
+    <Compile Include="Objects\Products\Inventory.cs" />
+    <Compile Include="Objects\Products\Item.cs" />
+    <Compile Include="Objects\Products\ItemsDo.cs" />
+    <Compile Include="Objects\Products\Photo.cs" />
+    <Compile Include="Objects\Products\PhotosDo.cs" />
+    <Compile Include="Objects\Products\PhotosStoredDo.cs" />
+    <Compile Include="Objects\Products\PhotoStorage.cs" />
+    <Compile Include="Objects\Products\Product.cs" />
+    <Compile Include="Objects\Products\ProductsDo.cs" />
+    <Compile Include="Objects\Shared\Constants.cs" />
+    <Compile Include="Objects\Shared\GroupTypes.cs" />
+    <Compile Include="Objects\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\Types.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{671EBE33-C81A-40C4-BCC6-BAEC12E343BC}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Communication\Test\Pull\" />
+    <Folder Include="Objects\Orders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Objects\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

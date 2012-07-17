@@ -1,0 +1,5 @@
+C:\MyStuff\Dev\Apps\View\bin\Debug\View.dll
+C:\MyStuff\Dev\Apps\View\bin\Debug\View.pdb
+C:\MyStuff\Dev\Apps\View\obj\Debug\ResolveAssemblyReference.cache
+C:\MyStuff\Dev\Apps\View\obj\Debug\View.dll
+C:\MyStuff\Dev\Apps\View\obj\Debug\View.pdb

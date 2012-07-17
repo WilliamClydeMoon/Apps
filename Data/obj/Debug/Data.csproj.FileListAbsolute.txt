@@ -1,0 +1,10 @@
+C:\MyStuff\Dev\Apps\Data\obj\Debug\ResolveAssemblyReference.cache
+C:\MyStuff\Dev\Apps\Data\bin\Debug\Data.dll
+C:\MyStuff\Dev\Apps\Data\bin\Debug\Data.pdb
+C:\MyStuff\Dev\Apps\Data\bin\Debug\Common.dll
+C:\MyStuff\Dev\Apps\Data\bin\Debug\Common.pdb
+C:\MyStuff\Dev\Apps\Data\obj\Debug\Data.dll
+C:\MyStuff\Dev\Apps\Data\obj\Debug\Data.pdb
+C:\MyStuff\Dev\Apps\Data\obj\Debug\Data.Objects.Strings.resources
+C:\MyStuff\Dev\Apps\Data\obj\Debug\GenerateResource.read.1.tlog
+C:\MyStuff\Dev\Apps\Data\obj\Debug\GenerateResource.write.1.tlog
