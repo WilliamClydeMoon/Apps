@@ -1,0 +1,19 @@
+ Volume in drive C is OSDisk
+ Volume Serial Number is 200D-A8B1
+
+ Directory of C:\MyStuff\Dev\Business\DesignContent\DataSpec\Dictionary
+
+05/31/2012  07:44 AM            12,785 address.docx
+05/31/2012  07:44 AM            12,799 alias.docx
+05/31/2012  07:44 AM            12,754 contact.docx
+05/31/2012  07:43 AM            12,851 Entity.docx
+05/31/2012  07:42 AM            12,876 inventory.docx
+05/31/2012  07:45 AM            13,678 order.docx
+05/31/2012  07:42 AM            12,930 orderManifest.docx
+05/31/2012  07:41 AM            12,864 orderQue.docx
+05/31/2012  07:41 AM            12,805 orderStatus.docx
+05/31/2012  07:43 AM            12,785 photo.docx
+05/31/2012  07:42 AM            12,812 product.docx
+05/29/2012  10:45 AM                 0 shipping.docx
+              13 File(s)        141,939 bytes
+               0 Dir(s)  259,214,917,632 bytes free
