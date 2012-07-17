@@ -14,3 +14,5 @@ C:\MyStuff\Dev\Apps\WPFApplication\bin\Debug\WPFApplication.exe
 C:\MyStuff\Dev\Apps\WPFApplication\bin\Debug\WPFApplication.pdb
 C:\MyStuff\Dev\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
 C:\MyStuff\Dev\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
