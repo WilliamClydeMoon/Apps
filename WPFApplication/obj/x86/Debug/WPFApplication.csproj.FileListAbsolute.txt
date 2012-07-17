@@ -16,3 +16,17 @@ C:\MyStuff\Dev\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
 C:\MyStuff\Dev\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
 C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
 C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
+C:\Apps\WPFApplication\bin\Debug\WPFApplication.exe
+C:\Apps\WPFApplication\bin\Debug\WPFApplication.pdb
+C:\Apps\WPFApplication\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Apps\WPFApplication\obj\x86\Debug\ExpenseItHome.baml
+C:\Apps\WPFApplication\obj\x86\Debug\MainWindow.baml
+C:\Apps\WPFApplication\obj\x86\Debug\App.baml
+C:\Apps\WPFApplication\obj\x86\Debug\ExpenseItHome.g.cs
+C:\Apps\WPFApplication\obj\x86\Debug\MainWindow.g.cs
+C:\Apps\WPFApplication\obj\x86\Debug\App.g.cs
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication_MarkupCompile.cache
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.g.resources
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.Properties.Resources.resources
+C:\Apps\WPFApplication\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Apps\WPFApplication\obj\x86\Debug\GenerateResource.write.1.tlog
