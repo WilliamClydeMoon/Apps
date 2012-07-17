@@ -9,3 +9,14 @@ C:\MyStuff\Dev\Apps\Apps\obj\x86\Debug\Apps.exe
 C:\MyStuff\Dev\Apps\Apps\obj\x86\Debug\Apps.pdb
 C:\MyStuff\Dev\Apps\Apps\bin\Debug\UnitTest.dll
 C:\MyStuff\Dev\Apps\Apps\bin\Debug\UnitTest.pdb
+C:\Apps\Apps\bin\Debug\Apps.exe
+C:\Apps\Apps\bin\Debug\Apps.pdb
+C:\Apps\Apps\bin\Debug\Data.dll
+C:\Apps\Apps\bin\Debug\UnitTest.dll
+C:\Apps\Apps\bin\Debug\Common.dll
+C:\Apps\Apps\bin\Debug\Data.pdb
+C:\Apps\Apps\bin\Debug\UnitTest.pdb
+C:\Apps\Apps\bin\Debug\Common.pdb
+C:\Apps\Apps\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Apps\Apps\obj\x86\Debug\Apps.exe
+C:\Apps\Apps\obj\x86\Debug\Apps.pdb
