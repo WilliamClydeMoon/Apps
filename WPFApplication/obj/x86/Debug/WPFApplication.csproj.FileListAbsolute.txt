@@ -14,8 +14,11 @@ C:\MyStuff\Dev\Apps\WPFApplication\bin\Debug\WPFApplication.exe
 C:\MyStuff\Dev\Apps\WPFApplication\bin\Debug\WPFApplication.pdb
 C:\MyStuff\Dev\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
 C:\MyStuff\Dev\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
+<<<<<<< HEAD
 C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
 C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
+=======
+>>>>>>> wip
 C:\Apps\WPFApplication\bin\Debug\WPFApplication.exe
 C:\Apps\WPFApplication\bin\Debug\WPFApplication.pdb
 C:\Apps\WPFApplication\obj\x86\Debug\ResolveAssemblyReference.cache
@@ -30,3 +33,8 @@ C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.g.resources
 C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.Properties.Resources.resources
 C:\Apps\WPFApplication\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Apps\WPFApplication\obj\x86\Debug\GenerateResource.write.1.tlog
+<<<<<<< HEAD
+=======
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.exe
+C:\Apps\WPFApplication\obj\x86\Debug\WPFApplication.pdb
+>>>>>>> wip
