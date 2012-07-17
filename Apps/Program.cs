@@ -13,8 +13,8 @@ namespace Apps
         static void Main(string[] args)
         {
             Tester test = new Tester() ;
-            test.TestApp("associations");
-            //test.TestApp("names");
+            //test.TestApp("associations");
+            test.TestApp("names");
         }
     }
 }
