@@ -39,6 +39,8 @@ Thumbs.db
 # ReSharper files    #
 ######################
 */_ReSharper*/*
+_ReSharper*/
+*.resharper
 *.dat
 *.crc
 *.version
