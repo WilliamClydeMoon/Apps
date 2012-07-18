@@ -11,12 +11,11 @@ using System.Text.RegularExpressions;
 
 namespace Common.Utility
 {
-    //DO NOT RENAME THIS CLASS TO MATCH THE FILENAME - GJL 01/17/2012
-    //DO NOT RENAME THE FILE TO MATCH THE CLASS NAME - GJL 01/17/2012
+
     public static class Utilities
     {
 
-        // Provides Boolean value back.  
+        /*__________________________________________________________________________________________*/
         public static bool GetBooleanValue(object oValueToParse, bool dDefaultValue)
         {
             try
@@ -34,13 +33,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Boolean value back with default false
+        /*__________________________________________________________________________________________*/
         public static bool GetBooleanValue(object oValueToParse)
         {
             return GetBooleanValue(oValueToParse, false);
         }
 
-        // Provides Char value back.  
+        /*__________________________________________________________________________________________*/
         public static char GetCharValue(object oValueToParse, char dDefaultValue)
         {
             try
@@ -58,7 +57,7 @@ namespace Common.Utility
             }
         }
 
-        // Provides Char value back with default Char.MinValue.  
+        /*__________________________________________________________________________________________*/
         public static char GetCharValue(object oValueToParse)
         {
             return GetCharValue(oValueToParse, Char.MinValue);
@@ -82,13 +81,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Date value back with default MinValue
+        /*__________________________________________________________________________________________*/
         public static DateTime GetDateTimeValue(object oValueToParse)
         {
             return GetDateTimeValue(oValueToParse, DateTime.MinValue);
         }
 
-        // Provides Decimal value back.  
+        /*__________________________________________________________________________________________*/
         public static decimal GetDecimalValue(object oValueToParse, decimal dDefaultValue)
         {
             try
@@ -106,13 +105,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Decimal value back with min value
+        /*__________________________________________________________________________________________*/
         public static decimal GetDecimalValue(object oValueToParse)
         {
             return GetDecimalValue(oValueToParse, 0);
         }
 
-        // Provides double value back.  
+        /*__________________________________________________________________________________________*/
         public static double GetDoubleValue(object oValueToParse, double dDefaultValue)
         {
             try
@@ -130,13 +129,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Double value back with MinValue
+        /*__________________________________________________________________________________________*/
         public static double GetDoubleValue(object oValueToParse)
         {
             return GetDoubleValue(oValueToParse, Double.MinValue);
         }
 
-        // Provides Float value back.  
+        /*__________________________________________________________________________________________*/
         public static float GetFloatValue(object oValueToParse, float fDefaultValue)
         {
             try
@@ -154,13 +153,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Float value back with default minvalue
+        /*__________________________________________________________________________________________*/
         public static float GetFloatValue(object oValueToParse)
         {
             return GetFloatValue(oValueToParse, Single.MinValue);
         }
 
-        // Provides Integer value back.  
+        /*__________________________________________________________________________________________*/
         public static int GetIntegerValue(object oValueToParse, int iDefaultValue)
         {
             try
@@ -178,13 +177,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Integer value back with MinValue
+        /*__________________________________________________________________________________________*/
         public static int GetIntegerValue(object oValueToParse)
         {
             return GetIntegerValue(oValueToParse, Int32.MinValue);
         }
 
-        // Provides Integer value back.  
+        /*__________________________________________________________________________________________*/
         public static int? GetNullableIntegerValue(object oValueToParse, int? iDefaultValue)
         {
             try
@@ -202,13 +201,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides Integer value back with MinValue
+        /*__________________________________________________________________________________________*/
         public static int? GetNullableIntegerValue(object oValueToParse)
         {
             return GetNullableIntegerValue(oValueToParse, null);
         }
 
-        // Provides String value back. 
+        /*__________________________________________________________________________________________*/
         public static string GetStringValue(object oValueToParse, string sDefaultValue)
         {
             try
@@ -226,13 +225,13 @@ namespace Common.Utility
             }
         }
 
-        // Provides String value back as string.Empty
+        /*__________________________________________________________________________________________*/
         public static string GetStringValue(object oValueToParse)
         {
             return GetStringValue(oValueToParse, System.String.Empty);
         }
 
-        //provides long value back
+        /*__________________________________________________________________________________________*/
         public static long GetLongValue(object oValueToParse, long iDefaultValue)
         {
             try
@@ -250,17 +249,17 @@ namespace Common.Utility
             }
         }
 
-        //provides long value back with MinValue
+        /*__________________________________________________________________________________________*/
         public static long GetLongValue(object oValueToParse)
         {
             return GetLongValue(oValueToParse, Int64.MinValue);
         }
-
+        /*__________________________________________________________________________________________*/
         public static ulong GetULongValue(object oValueToParse)
         {
             return GetULongValue(oValueToParse, UInt64.MinValue);
         }
-
+        /*__________________________________________________________________________________________*/
         public static ulong GetULongValue(object oValueToParse, ulong iDefaultValue)
         {
             if (oValueToParse == null || oValueToParse == DBNull.Value)
@@ -275,7 +274,7 @@ namespace Common.Utility
             }
             return (rt);
         }
-
+        /*__________________________________________________________________________________________*/
         public static DateTime GetTimestampValue(object oValueTimestamp, DateTime defaultVal)
         {
             DateTime tStampVal;
@@ -301,7 +300,7 @@ namespace Common.Utility
 
             return (tStampVal);
         }
-
+        /*__________________________________________________________________________________________*/
         public static DateTime GetTimestampValue(object oValueTimestamp)
         {
             DateTime tStampVal;
@@ -327,7 +326,7 @@ namespace Common.Utility
 
             return (tStampVal);
         }
-
+        /*__________________________________________________________________________________________*/
         public static void WaitMillis(int millisecondsToWait)
         {
             if (millisecondsToWait < 0)
@@ -346,20 +345,12 @@ namespace Common.Utility
                 }
             }
         }
-
-
-
-        /// <summary>
-        /// Checks whether an object/value type is null/default.  
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="input"></param>
-        /// <returns></returns>
+        /*__________________________________________________________________________________________*/
         public static bool IsNullOrDefault<T>(T input)
         {
             return (Equals(input, default(T)));
         }
-
+        /*__________________________________________________________________________________________*/
         public static object GetEnumFromConstantName<T>(string inputStr)
         {
             if (System.String.IsNullOrEmpty(inputStr))
@@ -367,7 +358,7 @@ namespace Common.Utility
 
             return ((T)Enum.Parse(typeof(T), inputStr, true));
         }
-
+        /*__________________________________________________________________________________________*/
         public static bool CanCurrencyValueDistibuteOverItems(decimal currencyValue, int numberOfItems)
         {
             if (numberOfItems <= 0)
@@ -383,7 +374,7 @@ namespace Common.Utility
             int numberOfCents = (int)(Math.Abs(Math.Round(currencyValue, 2)) * 100);
             return numberOfCents >= numberOfItems;
         }
-
+        /*__________________________________________________________________________________________*/
         public static decimal[] GetDistributeValuesForCurrencyOverItems(decimal currencyValue, int numberOfItems)
         {
             List<decimal> values = new List<decimal>();
@@ -431,7 +422,7 @@ namespace Common.Utility
 
             return values.ToArray();
         }
-
+        /*__________________________________________________________________________________________*/
         public static T ParseEnum<T>(string value, T defaultValue)
         {
             try
@@ -443,7 +434,7 @@ namespace Common.Utility
                 return defaultValue;
             }
         }
-
+        /*__________________________________________________________________________________________*/
         public static bool IsValidFFL(string ffl)
         {
             if (System.String.IsNullOrEmpty(ffl))
@@ -453,7 +444,7 @@ namespace Common.Utility
 
             return ffl.Trim().Length == 15;
         }
-
+        /*__________________________________________________________________________________________*/
         public static bool IsParsableAs<T>(this string text)
         {
             var converters = new Dictionary<System.Type, Func<string, bool>>();

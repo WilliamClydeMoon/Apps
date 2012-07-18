@@ -74,15 +74,15 @@ namespace Data.Objects.Products
                               }).Select(
                         record => new Item()
                         {
-                            ActualValue  = Utilities.GetDecimalValue(record[(int)ItemsIdx.ACTUALVALUE] ) ;   // int.Parse(record[(int)ItemsIdx.ACTUALVALUE]),
-                            Cost =  Utilities.GetDecimalValue(record[(int)ItemsIdx.COST],0.00),
+                            ActualValue  = Utilities.GetDecimalValue(record[(int)ItemsIdx.ACTUALVALUE] ) , 
+                            Cost =  Utilities.GetDecimalValue(record[(int)ItemsIdx.COST]),
 
-                            DepthInches  = int.Parse(record[(int)ItemsIdx.DEPTHINCHES]),
-                            HeightInches  = int.Parse(record[(int)ItemsIdx.HEIGHTINCHES ]),
-                            InventoryValue   = int.Parse(record[(int)ItemsIdx.INVENTORYVALUE]),
+                            DepthInches  = Utilities.GetIntegerValue(record[(int)ItemsIdx.DEPTHINCHES]),
+                            HeightInches = Utilities.GetIntegerValue(record[(int)ItemsIdx.HEIGHTINCHES]),
+                            InventoryValue = Utilities.GetIntegerValue(record[(int)ItemsIdx.INVENTORYVALUE]),
                             NewValue = Utilities.GetDecimalValue(record[(int)ItemsIdx.NEWVALUE ]),
-                            Weight = int.Parse(record[(int)ItemsIdx.WEIGHT]),
-                            WidthInches = int.Parse(record[(int)ItemsIdx.WIDTHINCHES]),
+                            Weight = Utilities.GetIntegerValue(record[(int)ItemsIdx.WEIGHT]),
+                            WidthInches = Utilities.GetIntegerValue(record[(int)ItemsIdx.WIDTHINCHES]),
                             Description  =  record[(int)ItemsIdx.DESCRIPTION],
                             Group   =  record[(int)ItemsIdx.GROUP],
                             InventoryId   =  record[(int)ItemsIdx.INVENTORYID],
