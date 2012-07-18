@@ -7,12 +7,12 @@ namespace Data.Objects.Products
 {
     public class Item
     {
-        private int _actualValue;
-        private int _cost;
+        private decimal _actualValue;
+        private decimal _cost;
         private int _depthInches;
         private int _heightInches;
         private int _inventoryValue;
-        private int _newValue;
+        private decimal _newValue;
         private int _weight;
         private int _widthInches;
         private string _description;
@@ -25,12 +25,12 @@ namespace Data.Objects.Products
         private string _serialNumber;
 
         #region public properties
-        public int ActualValue { get; set; }
-        public int Cost{ get; set; }
+        public decimal ActualValue { get; set; }
+        public decimal Cost { get; set; }
         public int DepthInches { get; set; }
         public int HeightInches { get; set; }
         public int InventoryValue { get; set; }
-        public int NewValue { get; set; }
+        public decimal NewValue { get; set; }
         public int Weight { get; set; }
         public int WidthInches { get; set; }
         public string Description { get; set; }

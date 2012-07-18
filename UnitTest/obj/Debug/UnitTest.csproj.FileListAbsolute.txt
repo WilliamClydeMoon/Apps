@@ -7,3 +7,12 @@ C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\Common.pdb
 C:\MyStuff\Dev\Apps\UnitTest\bin\Debug\Data.pdb
 C:\MyStuff\Dev\Apps\UnitTest\obj\Debug\UnitTest.dll
 C:\MyStuff\Dev\Apps\UnitTest\obj\Debug\UnitTest.pdb
+C:\Apps\UnitTest\bin\Debug\UnitTest.dll
+C:\Apps\UnitTest\bin\Debug\UnitTest.pdb
+C:\Apps\UnitTest\bin\Debug\Common.dll
+C:\Apps\UnitTest\bin\Debug\Data.dll
+C:\Apps\UnitTest\bin\Debug\Common.pdb
+C:\Apps\UnitTest\bin\Debug\Data.pdb
+C:\Apps\UnitTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Apps\UnitTest\obj\Debug\UnitTest.dll
+C:\Apps\UnitTest\obj\Debug\UnitTest.pdb

@@ -1,8 +1,0 @@
-<Modules>
-  <Module PersistentId="A40B1798-FDC6-4115-B6CB-4098F8603C9D" ModuleId="Apps" />
-  <Module PersistentId="671EBE33-C81A-40C4-BCC6-BAEC12E343BC" ModuleId="Common" />
-  <Module PersistentId="30E030F4-DEE5-4F50-8D61-D0D67E70C12F" ModuleId="Data" />
-  <Module PersistentId="6CDFE05D-A86F-43D1-AF8A-D18F41CF4326" ModuleId="View" />
-  <Module PersistentId="1156D6FB-EE06-4E8E-9304-DDFA6D2768CC" ModuleId="UnitTest" />
-  <Module PersistentId="798FFDBD-5BF6-44B2-BEAB-99D3829465BE" ModuleId="Forms" />
-</Modules>

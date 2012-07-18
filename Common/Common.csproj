@@ -49,6 +49,7 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Helpers\EnumHelper.cs" />
+    <Compile Include="Utilities\StaticUtilities.cs" />
     <Compile Include="Utilities\Type\PairType.cs" />
     <Compile Include="Utilities\Type\QuadType.cs" />
     <Compile Include="Utilities\Type\TupleType.cs" />

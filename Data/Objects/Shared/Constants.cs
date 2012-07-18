@@ -28,5 +28,24 @@ namespace Data.Objects.Shared
         BUYER        ,
         OWNER       , 
     }
+    public enum ItemsIdx : int
+    {
+        ACTUALVALUE            ,
+        COST                        ,
+        DEPTHINCHES            ,
+        HEIGHTINCHES            ,
+        INVENTORYVALUE       ,
+        NEWVALUE                ,
+        WEIGHT                    ,
+        WIDTHINCHES            ,
+        DESCRIPTION            ,
+        GROUP                     ,
+        INVENTORYID            ,
+        ITEMID                      ,
+        MATERIAL                  ,
+        MODELNUMBER          ,
+        PRODUCTID              ,
+        SERIALNUMBER         
+    }
 
 }

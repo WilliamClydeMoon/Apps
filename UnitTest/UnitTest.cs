@@ -11,6 +11,7 @@ using System.Xml.Schema;
 using Data.Objects.Shared;
 using Data.Objects;
 using Data.DataAccess;
+using Data.Objects.Products;
 
 namespace UnitTest
 {
@@ -52,6 +53,9 @@ namespace UnitTest
                 case "XML":
                     testxml();
                     break;
+                case "ITEMS":
+                    TestItems();
+                    break;
             }
         }
         private void testxml()
@@ -77,7 +81,14 @@ namespace UnitTest
             else
                 Console.WriteLine(errors);
         }
+        /*__________________________________________________________________________________________*/
+        private void TestItems()
+        {
+            ItemsDo items = new ItemsDo();
+            items.LoadData();
 
+
+        }
         /*__________________________________________________________________________________________*/
         private void TestEntity()
         {

@@ -8,3 +8,13 @@ C:\MyStuff\Dev\Apps\Data\obj\Debug\Data.pdb
 C:\MyStuff\Dev\Apps\Data\obj\Debug\Data.Objects.Strings.resources
 C:\MyStuff\Dev\Apps\Data\obj\Debug\GenerateResource.read.1.tlog
 C:\MyStuff\Dev\Apps\Data\obj\Debug\GenerateResource.write.1.tlog
+C:\Apps\Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Apps\Data\obj\Debug\Data.Objects.Strings.resources
+C:\Apps\Data\obj\Debug\GenerateResource.read.1.tlog
+C:\Apps\Data\obj\Debug\GenerateResource.write.1.tlog
+C:\Apps\Data\obj\Debug\Data.dll
+C:\Apps\Data\bin\Debug\Data.dll
+C:\Apps\Data\bin\Debug\Data.pdb
+C:\Apps\Data\bin\Debug\Common.dll
+C:\Apps\Data\bin\Debug\Common.pdb
+C:\Apps\Data\obj\Debug\Data.pdb

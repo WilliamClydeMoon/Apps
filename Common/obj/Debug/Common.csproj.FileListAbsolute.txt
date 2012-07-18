@@ -3,3 +3,8 @@ C:\MyStuff\Dev\Apps\Common\bin\Debug\Common.pdb
 C:\MyStuff\Dev\Apps\Common\obj\Debug\ResolveAssemblyReference.cache
 C:\MyStuff\Dev\Apps\Common\obj\Debug\Common.dll
 C:\MyStuff\Dev\Apps\Common\obj\Debug\Common.pdb
+C:\Apps\Common\bin\Debug\Common.dll
+C:\Apps\Common\bin\Debug\Common.pdb
+C:\Apps\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Apps\Common\obj\Debug\Common.dll
+C:\Apps\Common\obj\Debug\Common.pdb

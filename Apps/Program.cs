@@ -14,7 +14,9 @@ namespace Apps
         {
             Tester test = new Tester() ;
             //test.TestApp("associations");
-            test.TestApp("names");
+            //test.TestApp("names");
+            test.TestApp("Items");
+
         }
     }
 }
