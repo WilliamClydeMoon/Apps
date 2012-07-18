@@ -8,8 +8,10 @@
 *.o
 *.so
 *.suo
+*.force
 */bin/Debug/*
 */bin/Release/*
+*/obj/*
 
 # Packages #
 ############
