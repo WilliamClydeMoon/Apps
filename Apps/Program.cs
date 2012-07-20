@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 //using Data.Communication.Test;
 using UnitTest ;
+using Common.Extensions;
 
 
 namespace Apps
@@ -16,7 +17,15 @@ namespace Apps
             //test.TestApp("associations");
             //test.TestApp("names");
             test.TestApp("Items");
-
+            //test.TestApp("STRINGEXTENSIONS");
+//Household
+//Electronic Equipment
+//Fire Arms
+//Tools
+//appliances
+//Jewlery
+//Photograpy Equipment
+//Musical Instruments
         }
     }
 }

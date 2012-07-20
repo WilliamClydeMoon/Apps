@@ -16,9 +16,9 @@ namespace Data.Objects.Products
     {
         private List<Item> _items;
         public List<string> Ids  = new List<string>();
-
+        public List<string> GroupNames = new List<string>();
         private string _Id;
-
+        private string _group;
         private bool _getall;
         private int _idtype;
 
@@ -34,6 +34,9 @@ namespace Data.Objects.Products
         #region private members
         /*__________________________________________________________________________________________*/
         public List<Item> Items { get; set; }
+        /*___________________________________________________________________________________________*/
+        public string Group { get { return _group; } set { _group = value; } }
+
         /*__________________________________________________________________________________________*/
         public bool GetAll
         {
@@ -45,6 +48,20 @@ namespace Data.Objects.Products
                 return _getall;
             }
             set { _getall = value; }
+        }
+        #endregion
+        #region Public Methods
+        /*___________________________________________________________________________________________*/
+        public List<Item>GetAllItemsByGroup(string groupname)
+        {
+            return Items.FindAll(items => items.Group == groupname);
+        }
+        /*___________________________________________________________________________________________*/
+        public List<string>GetUniqueGroups()
+        {
+            var results = Items.Distinct(records => records.Group).ToList();
+            results.Sort();
+            return results;
         }
         #endregion
         #region Data
@@ -62,6 +79,8 @@ namespace Data.Objects.Products
                 string path = @"C:\MyStuff\Dev\Apps\Data\Communication\Test\Pull\";
                 string filePath = path + file;
                 bool matchParentGroup = true;
+                System.Nullable <bool> isGroupNameEmpty = GroupNames.IsNullOrEmpty();
+                System.Nullable<bool> isGroup = !Group.IsNullOrEmpty();
                 System.Nullable<bool> isIdsEmpty = Ids.IsNullOrEmpty();
 
                 var records = File.ReadLines(filePath).Select(
@@ -76,38 +95,40 @@ namespace Data.Objects.Products
                         {
                             ActualValue  = Utilities.GetDecimalValue(record[(int)ItemsIdx.ACTUALVALUE] ) , 
                             Cost =  Utilities.GetDecimalValue(record[(int)ItemsIdx.COST]),
-
                             DepthInches  = Utilities.GetIntegerValue(record[(int)ItemsIdx.DEPTHINCHES]),
                             HeightInches = Utilities.GetIntegerValue(record[(int)ItemsIdx.HEIGHTINCHES]),
                             InventoryValue = Utilities.GetIntegerValue(record[(int)ItemsIdx.INVENTORYVALUE]),
                             NewValue = Utilities.GetDecimalValue(record[(int)ItemsIdx.NEWVALUE ]),
                             Weight = Utilities.GetIntegerValue(record[(int)ItemsIdx.WEIGHT]),
                             WidthInches = Utilities.GetIntegerValue(record[(int)ItemsIdx.WIDTHINCHES]),
-                            Description  =  record[(int)ItemsIdx.DESCRIPTION],
-                            Group   =  record[(int)ItemsIdx.GROUP],
-                            InventoryId   =  record[(int)ItemsIdx.INVENTORYID],
-                            ItemId   =  record[(int)ItemsIdx.ITEMID],
-                            Material   =  record[(int)ItemsIdx.MATERIAL],
-                            ModelNumber   =  record[(int)ItemsIdx.MODELNUMBER],
-                            ProductID   =  record[(int)ItemsIdx.PRODUCTID],
-                            SerialNumber   =  record[(int)ItemsIdx.SERIALNUMBER]
+                            Description  =  Utilities.GetStringValue(record[(int)ItemsIdx.DESCRIPTION]),
+                            Group   =  Utilities.GetStringValue(record[(int)ItemsIdx.GROUP]),
+                            InventoryId   =  Utilities.GetStringValue(record[(int)ItemsIdx.INVENTORYID]),
+                            ItemId   =  Utilities.GetStringValue(record[(int)ItemsIdx.ITEMID]),
+                            Material   =  Utilities.GetStringValue(record[(int)ItemsIdx.MATERIAL]),
+                            ModelNumber   =  Utilities.GetStringValue(record[(int)ItemsIdx.MODELNUMBER]),
+                            ProductID   =  Utilities.GetStringValue(record[(int)ItemsIdx.PRODUCTID]),
+                            SerialNumber   =  Utilities.GetStringValue(record[(int)ItemsIdx.SERIALNUMBER])
                         });
-                //Select(z => { return z; })
+                //z => { return z; });
                 // filter out the values by group if passed in.
-                //var lines = records.Select(line => line)
-                //    .Where(line =>
-                //               {
-                //                   true;
-                //                   //if (isParentGroup.HasValue && isParentGroup.Value)
-                //                   //    matchParentGroup = line.Group == Group; // _parentgroup;
+                var lines = records.Select(line => line)
+                        .Where(line =>
+                            {
+                                //if (isGroup.HasValue && isGroup.Value)
+                                //    matchParentGroup = line.Group == Group; // _parentgroup;
+                                return matchParentGroup = isGroupNameEmpty.Value
+                                    ? true
+                                    : GroupNames.FindIndex(val_ => val_.Trim() == line.Group.Trim()) >= 0;
 
-                //                   //return matchParentGroup;
-                //               }).ToList();
+                                //return matchParentGroup;
+                            }).ToList();
 
-                foreach (var line in records)
+                foreach (var items in lines)
                 {
-                    Items.Add(line);
+                    Items.Add(items);
                 }
+
             }
         }
         #endregion

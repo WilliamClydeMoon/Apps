@@ -184,7 +184,7 @@ namespace Data.Objects
                 string file = "Names.csv";
                 string path = @"C:\MyStuff\Dev\Apps\Data\Communication\Test\Pull\";
                 string filePath = path + file;
-                System.Nullable<bool> isParentGroup = !Group.IsNullOrEmpty();
+                System.Nullable<bool> isGroup = !Group.IsNullOrEmpty();
                 System.Nullable<bool> isIdsEmpty = Ids.IsNullOrEmpty();
                 bool matchParentGroup = true;
 
@@ -211,7 +211,7 @@ namespace Data.Objects
                 var lines = records.Select(line => line)
                     .Where(line =>
                     {
-                        if (isParentGroup.HasValue && isParentGroup.Value)
+                        if (isGroup.HasValue && isGroup.Value)
                             matchParentGroup = line.Group == Group; // _parentgroup;
 
                         return matchParentGroup;

@@ -56,6 +56,9 @@ namespace UnitTest
                 case "ITEMS":
                     TestItems();
                     break;
+                case "STRINGEXTENSIONS":
+                    TestStringExtension();
+                    break;
             }
         }
         private void testxml()
@@ -84,9 +87,11 @@ namespace UnitTest
         /*__________________________________________________________________________________________*/
         private void TestItems()
         {
-            ItemsDo items = new ItemsDo();
-            items.LoadData();
+            //ItemsDo items = new ItemsDo();
+            //items.LoadData();
 
+            ItemTest testitem = new ItemTest();
+            testitem.TestLoad();
 
         }
         /*__________________________________________________________________________________________*/
@@ -142,7 +147,12 @@ namespace UnitTest
             existingcontact.Test();                
         }
         //BuildEntityTestData test = new BuildEntityTestData();
+        /*__________________________________________________________________________________________*/
+       private void TestStringExtension()
+       {
+           string teststring = "295-44-0661";
+           Console.WriteLine(teststring.FormatWithMask("*******####"));
 
-       
+       }
     }
 }

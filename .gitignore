@@ -9,6 +9,7 @@
 *.so
 *.suo
 *.force
+*.bak
 */bin/Debug/*
 */bin/Release/*
 */obj/*
@@ -53,3 +54,4 @@ _ReSharper*/
 
 # Office Temp Files
 ~$*
+~*

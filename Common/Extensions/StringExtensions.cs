@@ -67,11 +67,11 @@ namespace Common.Extensions
                     if (index < input.Length)
                     {
                         output += input[index];
-                        index++;
                     }
                 }
                 else
                     output += m;
+                    index++;
             }
             return output;
         }
