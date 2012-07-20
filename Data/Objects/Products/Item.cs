@@ -23,7 +23,20 @@ namespace Data.Objects.Products
         private string _modelNumber;
         private string _productID;
         private string _serialNumber;
+        #region public methods
 
+        private string[] _itemArray ;
+        /*___________________________________________________________________________________________*/
+        public string[] ItemArray
+        {
+            get{ if (_itemArray == null)
+                    _itemArray = new string[] { this.Group, this.Description, this.ItemId, this.ActualValue.ToString( ) , this.Cost.ToString( ) };
+
+            return _itemArray;
+            }
+            set { _itemArray = value; }
+        }
+        #endregion
         #region public properties
         public decimal ActualValue { get; set; }
         public decimal Cost { get; set; }

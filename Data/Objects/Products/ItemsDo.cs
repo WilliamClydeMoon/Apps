@@ -20,8 +20,6 @@ namespace Data.Objects.Products
         private string _Id;
         private string _group;
         private bool _getall;
-        private int _idtype;
-
 
         #region Contstructor
         /*__________________________________________________________________________________________*/
@@ -56,12 +54,33 @@ namespace Data.Objects.Products
         {
             return Items.FindAll(items => items.Group == groupname);
         }
+
         /*___________________________________________________________________________________________*/
         public List<string>GetUniqueGroups()
         {
             var results = Items.Distinct(records => records.Group).ToList();
             results.Sort();
             return results;
+        }
+        /*__________________________________________________________________________________________*/
+        public void ReSet()
+        {
+            _Id = null;
+            _group = null;
+            _getall = false;
+            GroupNames.Clear();
+            Ids.Clear();
+            Items.Clear();
+        }
+        #endregion
+        #region Fetch Data
+        /*__________________________________________________________________________________________*/
+        public void ReviewTestData(List<Item> list, string msg)
+        {
+            Console.WriteLine(msg);
+            foreach (var line in list)
+                Console.WriteLine(line.ItemArray.StringConcatenate());
+
         }
         #endregion
         #region Data
@@ -71,7 +90,7 @@ namespace Data.Objects.Products
             Items.Add(dataObject);
         }
         /*__________________________________________________________________________________________*/
-        public void LoadData()
+        public List<Item> LoadData()
         {
             if (Items.IsNullOrEmpty())
             {
@@ -117,7 +136,7 @@ namespace Data.Objects.Products
                             {
                                 //if (isGroup.HasValue && isGroup.Value)
                                 //    matchParentGroup = line.Group == Group; // _parentgroup;
-                                return matchParentGroup = isGroupNameEmpty.Value
+                                return  isGroupNameEmpty.Value
                                     ? true
                                     : GroupNames.FindIndex(val_ => val_.Trim() == line.Group.Trim()) >= 0;
 
@@ -130,7 +149,9 @@ namespace Data.Objects.Products
                 }
 
             }
+            return Items;
         }
+
         #endregion
 
     }

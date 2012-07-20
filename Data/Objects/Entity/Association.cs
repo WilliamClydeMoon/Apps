@@ -14,7 +14,7 @@ namespace Data.Objects
         private string _ChildGroup;
         private string _ChildId;
         //private DateTime _sysDateTime;
-
+        /*___________________________________________________________________________________________*/
         public Association  NewRecord( string parentGroup, string parentId, string childGroup, string childId)
         {
             //Group = group;
@@ -26,7 +26,7 @@ namespace Data.Objects
         }
 
 
-        private string[] _associationArray;
+        
 
         //public string Group { get; set; }
         public string ParentGroup { get; set; }
@@ -34,6 +34,8 @@ namespace Data.Objects
         public string ChildGroup { get; set; }
         public string ChildId { get; set; }
         //public DateTime SysDateTime { get; set; }
+        private string[] _associationArray;
+        /*___________________________________________________________________________________________*/
         public string[] AssociationArray
         {
             get
