@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Communication\Test\Pull\" />
-    <Folder Include="Objects\Orders\" />
+    <Folder Include="Objects\Transactions\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Objects\Strings.resx">

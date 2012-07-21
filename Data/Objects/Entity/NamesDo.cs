@@ -177,7 +177,7 @@ namespace Data.Objects
             Names.Add(dataObject);
         }
         /*__________________________________________________________________________________________*/
-        public void LoadData()
+        public List<Name> LoadData()
         {
             if (Names.IsNullOrEmpty())
             {
@@ -222,6 +222,7 @@ namespace Data.Objects
                     Names.Add(items);
                 }
             }
+            return Names;
         }
         #endregion
     }

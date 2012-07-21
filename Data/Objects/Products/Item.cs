@@ -15,6 +15,8 @@ namespace Data.Objects.Products
         private decimal _newValue;
         private int _weight;
         private int _widthInches;
+        private string _conditionIn;
+        private string _conditionOut;
         private string _description;
         private string _group;
         private string _inventoryId;
@@ -46,6 +48,8 @@ namespace Data.Objects.Products
         public decimal NewValue { get; set; }
         public int Weight { get; set; }
         public int WidthInches { get; set; }
+        public string ConditionIn { get; set; }
+        public string ConditionOut { get; set; }
         public string Description { get; set; }
         public string Group { get; set; }
         public string InventoryId { get; set; }

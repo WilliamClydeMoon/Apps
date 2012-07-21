@@ -8,7 +8,6 @@ using Common.Utility.Type;
 using Common.Extensions;
 using Data.Objects.Shared;
 using Data.DataAccess;
-
 namespace Data.Objects
 {
     public class AssociationsDo
@@ -33,76 +32,7 @@ namespace Data.Objects
             GetAll = false;
             Associations = new List<Association>();
         }
-        ///*__________________________________________________________________________________________*/
-        //public AssociationsDo(string groupname, string Id, string instructions)
-        //{
-        //    //parentgroup/parentid    parentparent
-        //    //parentgroup/childid      parentchild
-        //    //childname/childid         childchild
-        //    //childname/parentid      childparent
-
-        //    instructions = instructions.ToUpper();
-        //    if ( instructions == "PARENTPARENT")
-        //    {
-        //        _parentgroup = groupname;
-        //        _parentId = Id;
-        //        IDType = (int)AssociationIdx.PARENTID;
-        //    }
-        //    else if(instructions == "PARENTCHILD")
-        //    {
-        //        _parentgroup = groupname;
-        //        _childId  = Id;
-        //        IDType = (int)AssociationIdx.CHILDID;
-        //    }
-        //    else if(instructions == "CHILDCHILD")            
-        //    {
-        //        _childgroup = groupname;
-        //        _childId = Id;
-        //        IDType = (int)AssociationIdx.CHILDID;
-        //    }
-        //    else if(instructions == "CHILDPARENT")
-        //    {
-        //        IDType = (int)AssociationIdx.PARENTID;
-        //        _childgroup = groupname;
-        //        _parentId = Id;
-        //    }
-
-        //    Ids.Add(Id);
-        //}
-        ///*__________________________________________________________________________________________*/
-        //public AssociationsDo(string parentgroup, string Id, string childgroup, string instructions)
-        //{
-        //    instructions = instructions.ToUpper();
-        //    if (instructions == "PARENT")
-        //    {
-        //        IDType = (int)AssociationIdx.PARENTID;
-        //        _parentId = Id;
-        //    }
-        //    else if (instructions == "CHILD")
-        //    {
-        //        IDType = (int)AssociationIdx.CHILDID;
-        //        _childId = Id;
-        //    }
-        //    // Load Data where ParentGroup = parentgroup
-        //    Ids.Add(Id);
-        //    _parentgroup = parentgroup;
-        //    _childgroup = childgroup;
-
-        //}
-        ///*__________________________________________________________________________________________*/
-        //public AssociationsDo(List<string > Ids, string grouptype )
-        //{
-        //}
-        ///*__________________________________________________________________________________________*/
-        //public AssociationsDo(bool getall )
-        //{
-        //    GetAll = true;
-        //}
-        ///*__________________________________________________________________________________________*/
-        //public AssociationsDo(string grouptype)
-        //{
-        //}
-
+ 
 #endregion
         #region private members        
 
@@ -180,12 +110,6 @@ namespace Data.Objects
             return results;
         }
         /*__________________________________________________________________________________________*/
-        //public List<string> GetUniqueChildIdsByParentAndChildGroup(string parent, string child) //TODO Not tested
-        //{
-        //    //var results = Associations.Distinct(items => items.ParentGroup  && items.ChildGroup )ToList(); //Select(Ids => Ids.ChildId.ToString());
-        //    //return results.ToList();
-        //}
-        /*__________________________________________________________________________________________*/
         public List<Association> GetAllParentIdsByParentGroup(string parent)
         {
             var results = Associations.FindAll(items => items.ParentGroup == parent ); //.Select(Ids => Ids.ParentId.ToString( ));
@@ -217,6 +141,12 @@ namespace Data.Objects
             var results = Associations.FindAll(items => items.ParentGroup == parentgroup);
             return results;
         }
+        /*__________________________________________________________________________________________*/
+        public List<Association> GetAllAssociationsByChildGroup(string childgroup)
+        {
+            var results = Associations.FindAll(items => items.ChildGroup == childgroup);
+            return results;
+        }
         #endregion
         #region BY ID
         /*__________________________________________________________________________________________*/
@@ -239,20 +169,6 @@ namespace Data.Objects
             var results = Associations.FindAll(items => items.ChildId == childId);
             return results;
         }
-        ///*__________________________________________________________________________________________*/
-        //public List<Association> AssociationChildIdsByParentIdList(List<string> Ids )
-        //{
-        //    var records = record => Associations.Where( Ids.FindIndex( val_ => val_ == ) )
-        //}
-        ///*__________________________________________________________________________________________*/
-        //public List<Association> AssociationChildIdsByChildIds(List<string> Ids)
-        //{ }
-        ///*__________________________________________________________________________________________*/
-        //public List<Association> AssociationParentIdsByParentIdList(List<string> Ids)
-        //{ }
-        ///*__________________________________________________________________________________________*/
-        //public List<Association> AssociationParentIdsByChildIds(List<string> Ids)
-        //{ }  
         #endregion
         #region BY ID & GROUP
         /*__________________________________________________________________________________________*/
@@ -304,7 +220,6 @@ namespace Data.Objects
 
             return associations.Select(pair => new PairType<string, string>(pair.ChildGroup, pair.ChildId)).ToList();
         }
-
         /*__________________________________________________________________________________________*/
         public List<QuadType<string, string, string, string>> GetQuadDataList(List<Association> associations)
         {
@@ -402,143 +317,3 @@ namespace Data.Objects
     }
         #endregion
 }
-
-
-/*
-var record = File.ReadLines(filePath).Select(
-        lines => lines.RemoveCharacters("\"").Split(','))
-    .Where(line =>
-    {
-        return GetAll
-                   ? true
-                   : Ids.FindIndex(val_ => val_ == line[(int)AssociationIdx.PARENTID]) >= 0
-                     && isParentGroup.HasValue &&
-                     line[(int)AssociationIdx.PARENT] == _parentgroup
-                     && isChildGroup.HasValue &&
-                     line[(int)AssociationIdx.CHILD] == _childgroup;
-    })
-.Select(
-    lines => new Association() 
-    {
-        ParentGroup = lines[(int)AssociationIdx.PARENT],
-        ParentId = lines[(int)AssociationIdx.PARENTID],
-        ChildGroup = lines[(int)AssociationIdx.CHILD],
-        ChildId = lines[(int)AssociationIdx.CHILDID]
-    }).ToList();
-
-foreach (var items in record)
-    Associations.Add(items);
-*/
-
-                //var lines = File.ReadLines(filePath).Select(
-                //    line => line.RemoveCharacters("\"").Split(',')).
-                //    Where(data =>
-                //              {
-                //                  return GetAll ? true : data[(int)AssociationIdx.PARENTID] == id;
-                //              }).Select( 
-                //        items => new Association()  // TODO add logic to filter by ID
-                //                     {
-                //                         ParentGroup = items[(int) AssociationIdx.PARENT],
-                //                         ParentId = items[(int) AssociationIdx.PARENTID],
-                //                         ChildGroup = items[(int) AssociationIdx.CHILD],
-                //                         ChildId = items[(int) AssociationIdx.CHILDID]
-                //                         //Group = items[(int) AssociationIdx.GROUP]
-                //                     });
-
-
-/* WORKING
-var record = File.ReadLines(filePath).Select(
-    lines => lines.RemoveCharacters("\"").Split(',')).
-    Where(line =>
-              {
-                  return GetAll
-                             ? true
-                             : Ids.FindIndex(val_ => val_ == line[(int)AssociationIdx.PARENTID]) >= 0;
-              })
-             .Select(
-                    lines => new Association()  // TODO add logic to filter by ID
-                     {
-                         ParentGroup = lines[(int)AssociationIdx.PARENT],
-                         ParentId = lines[(int)AssociationIdx.PARENTID],
-                         ChildGroup = lines[(int)AssociationIdx.CHILD],
-                         ChildId = lines[(int)AssociationIdx.CHILDID]
-                     }).ToList();
-
-foreach (var items in record)
-    Associations.Add(items);
-
-
-var data = record.Select(lines => lines)
-    .Where(lines =>
-               {
-                   if (isParentGroup.HasValue && isParentGroup.Value)
-                       matchParentGroup = lines.ParentGroup == _parentgroup;
-
-                   if (isChildGroup.HasValue & isChildGroup.Value)
-                       matchChildGroup = lines.ChildGroup  == _childgroup;
-
-                   return matchParentGroup && matchChildGroup;
-
-               }).ToList();
-
-foreach (var items in data)
-    Associations.Add(items);
-
- 
-var record = File.ReadLines(filePath).Select(
-    lines => lines.RemoveCharacters("\"").Split(','))
-    .Where( line =>
-                {
-                    return GetAll
-                               ? true
-                               : Ids.FindIndex(val_ => val_ == line[(int) AssociationIdx.PARENTID]) >= 0;
-                })
-                .Where(line =>
-                           {
-                               if (isParentGroup.HasValue &&isParentGroup.Value )
-                                  matchParentGroup = line[(int)AssociationIdx.PARENT] == _parentgroup;
-
-                               if (isChildGroup.HasValue &isChildGroup.Value )
-                                  matchChildGroup = line[(int)AssociationIdx.CHILD ] == _childgroup ;
-
-                               return matchParentGroup && matchChildGroup;
-
-                           })
-             .Select( line =>
-                    if (isParentGroup.HasValue &&isParentGroup.Value )
-                        matchParentGroup = line[(int)AssociationIdx.PARENT] == _parentgroup;
-
-                    if (isChildGroup.HasValue &isChildGroup.Value )
-                        matchChildGroup = line[(int)AssociationIdx.CHILD ] == _childgroup ;
-
-                    if (matchParentGroup && matchChildGroup)
-                        lines => new Association()
-                                     {
-                                         ParentGroup = lines[(int) AssociationIdx.PARENT],
-                                         ParentId = lines[(int) AssociationIdx.PARENTID],
-                                         ChildGroup = lines[(int) AssociationIdx.CHILD],
-                                         ChildId = lines[(int) AssociationIdx.CHILDID]
-                                     };
-                     ).ToList() ;
-*/
-
-
-
-
-
-//var record = File.ReadLines(filePath).Select(
-//    lines => lines.RemoveCharacters("\"").Split(',')).
-//    Where(line =>
-//              {
-//                  return GetAll
-//                             ? true
-//                             : Ids.FindIndex(val_ => val_ == line[(int) AssociationIdx.PARENTID]) >= 0;
-//              })
-//             .Select( 
-//                    lines => new Association()  // TODO add logic to filter by ID
-//                     {
-//                         ParentGroup = lines[(int)AssociationIdx.PARENT],
-//                         ParentId = lines[(int)AssociationIdx.PARENTID],
-//                         ChildGroup = lines[(int)AssociationIdx.CHILD],
-//                         ChildId = lines[(int)AssociationIdx.CHILDID]
-//                     }).ToList() ;

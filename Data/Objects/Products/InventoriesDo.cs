@@ -43,6 +43,11 @@ namespace Data.Objects
         {
             Inventories.Add(dataObject);
         }
+        /*__________________________________________________________________________________________*/
+        //public List<Inventory > LoadData()
+        //{
+
+        //}
     }
 }
 

@@ -120,6 +120,8 @@ namespace Data.Objects.Products
                             NewValue = Utilities.GetDecimalValue(record[(int)ItemsIdx.NEWVALUE ]),
                             Weight = Utilities.GetIntegerValue(record[(int)ItemsIdx.WEIGHT]),
                             WidthInches = Utilities.GetIntegerValue(record[(int)ItemsIdx.WIDTHINCHES]),
+                            ConditionIn = Utilities.GetStringValue(record[(int)ItemsIdx.CONDITIONIN]),
+                            ConditionOut = Utilities.GetStringValue(record[(int)ItemsIdx.CONDITIONOUT]),
                             Description  =  Utilities.GetStringValue(record[(int)ItemsIdx.DESCRIPTION]),
                             Group   =  Utilities.GetStringValue(record[(int)ItemsIdx.GROUP]),
                             InventoryId   =  Utilities.GetStringValue(record[(int)ItemsIdx.INVENTORYID]),
@@ -134,13 +136,9 @@ namespace Data.Objects.Products
                 var lines = records.Select(line => line)
                         .Where(line =>
                             {
-                                //if (isGroup.HasValue && isGroup.Value)
-                                //    matchParentGroup = line.Group == Group; // _parentgroup;
                                 return  isGroupNameEmpty.Value
                                     ? true
                                     : GroupNames.FindIndex(val_ => val_.Trim() == line.Group.Trim()) >= 0;
-
-                                //return matchParentGroup;
                             }).ToList();
 
                 foreach (var items in lines)

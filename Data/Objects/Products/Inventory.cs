@@ -14,10 +14,9 @@ namespace Data.Objects
         private string _location;
         private string _productId;
         private string _status;
+        private string _group;
 
 
-        private string _conditionIn;
-        private string conditionOut;
 
 
         public Inventory()
@@ -33,7 +32,8 @@ namespace Data.Objects
          _inventoryId = "";
          _location = "";
          _productId = "";
-         _status = "";  
+         _status = "";
+         _group = "";
         }
 
         public DateTime InDateTime { get; set; }
@@ -43,7 +43,6 @@ namespace Data.Objects
         public string Location { get; set; }
         public string ProductId { get; set; }
         public string Status { get; set; }
-        public string ConditionIn { get; set; }
-        public string ConditionOut { get; set; }
+        public string Group { get; set; }
     }
 }

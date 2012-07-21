@@ -38,6 +38,8 @@ namespace Data.Objects.Shared
         NEWVALUE                ,
         WEIGHT                    ,
         WIDTHINCHES            ,
+        CONDITIONIN     ,
+        CONDITIONOUT   , 
         DESCRIPTION            ,
         GROUP                     ,
         INVENTORYID            ,
