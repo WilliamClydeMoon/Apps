@@ -15,7 +15,7 @@ namespace Data.Objects
 {
     public class ProductsDo
     {
-        private List<Product> _product;
+        private List<Product> _products;
         public List<string> Ids = new List<string>();
         public List<string> GroupNames = new List<string>();
         private string _Id;
@@ -24,23 +24,17 @@ namespace Data.Objects
         public List<Product> Products;
 
         /*__________________________________________________________________________________________*/
-
         public ProductsDo()
         {
             Products = new List<Product>();
-
         }
-
         /*___________________________________________________________________________________________*/
-
         public string Group
         {
             get { return _group; }
             set { _group = value; }
         }
-
         /*__________________________________________________________________________________________*/
-
         public bool GetAll
         {
             get
@@ -52,48 +46,36 @@ namespace Data.Objects
             }
             set { _getall = value; }
         }
-
         /*__________________________________________________________________________________________*/
-
         public List<Product> GetAllProducts()
         {
             return Products;
         }
-
         /*__________________________________________________________________________________________*/
-
         public Product GetProductByInventoryId(string id)
         {
             int idx = 0;
             idx = Products.FindIndex(item => item.InventoryId == id);
             return Products[idx];
         }
-
         /*__________________________________________________________________________________________*/
-
         public List<Product> GetProductByGroup(string GroupName)
         {
             var results = Products.FindAll(item => item.Group == GroupName);
             return results;
         }
-
         /*__________________________________________________________________________________________*/
-
         public List<string> GetUniqueGroups()
         {
             var results = Products.Distinct(items => items.Group).ToList();
             return results;
         }
-
         /*__________________________________________________________________________________________*/
-
         public void Add(Product dataObject)
         {
             Products.Add(dataObject);
         }
-
         /*__________________________________________________________________________________________*/
-
         public List<Product> LoadData() // TODO Not Tested
         {
             if (Products.IsNullOrEmpty())

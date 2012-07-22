@@ -9,7 +9,7 @@ namespace Data.Objects
     {
 
         private DateTime _SysDateTime;
-        private string _item;
+        private string _itemId;
         private string _photoId;
         private string _productID;
 
@@ -20,12 +20,12 @@ namespace Data.Objects
         private void intialize()
         {
             _SysDateTime = DateTime.Now;
-            _item = "";
+            _itemId = "";
             _photoId = "";
             _productID = "";
         }
         public DateTime SysDateTime { get; set; }
-        public string item { get; set; }
+        public string itemId { get; set; }
         public string photoId { get; set; }
         public string productID { get; set; }
 
